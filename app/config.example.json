@@ -1,0 +1,8 @@
+{
+  "serper": {
+    "api_key": "your-serper-api-key-here",
+    "api_url": "https://google.serper.dev/search",
+    "max_results": 10
+  }
+}
+
