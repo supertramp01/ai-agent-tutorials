@@ -23,7 +23,7 @@ logging.basicConfig(
 
 logger = logging.getLogger("mcp_server")
 
-mcp = FastMCP(name="AI Search Agent")
+mcp = FastMCP(name="SmartSearchAgent")
 
 @mcp.tool
 def greet(name: str) -> str:
@@ -263,5 +263,7 @@ async def ai_search(query: str, ctx: Context) -> str:
 
 
 if __name__ == "__main__":
-    # Run server with HTTP transport to match the client
+    # For Claude Desktop: use stdio transport (no host/port needed)
+    # For HTTP client testing: use mcp.run(transport="http", host="127.0.0.1", port=8000)
     mcp.run(transport="http", host="127.0.0.1", port=8000)
+    #mcp.run(transport="stdio")
