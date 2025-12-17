@@ -8,9 +8,7 @@ from datetime import datetime
 from fastmcp import FastMCP, Context
 
 # Set up logging to file
-log_dir = Path(__file__).parent / "logs"
-log_dir.mkdir(exist_ok=True)
-log_file = log_dir / "mcp.log"
+log_file = "mcp.log"
 
 logging.basicConfig(
     level=logging.INFO,
